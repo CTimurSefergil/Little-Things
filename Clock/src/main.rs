@@ -18,10 +18,10 @@ fn main() {
     loop {
         let t = Local::now();
         let time = t.format("%H:%M:%S").to_string();
-        for row in &DIGITS { // BUNA NEDEN İHTİYAÇ DUYULDU SOR ???
+        for row in &DIGITS { 
             for c in time.chars() {
                 let col = match c {
-                    '0'..='9' => c as usize - '0' as usize, // BU NEDEN VAR SOR ???
+                    '0'..='9' => c as usize - '0' as usize, 
                     _ => 10,
                 };
                 print!("{} ", row[col]);
